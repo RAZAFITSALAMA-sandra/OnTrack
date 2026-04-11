@@ -125,13 +125,13 @@ MONGO_URI=mongodb://admin:sandra@localhost:27017/taskflow?authSource=admin
 JWT_SECRET=taskflow_secret_2024
 ```
 
-#### Frontend — `frontend/.env`
+<!-- #### Frontend — `frontend/.env`
 
 ```env
 VITE_API_URL=http://localhost:3000/api
 ```
 
-> **Security note:** Never commit `.env` files to version control. Both are already listed in `.gitignore`.
+> **Security note:** Never commit `.env` files to version control. Both are already listed in `.gitignore`. -->
 
 ---
 
@@ -192,7 +192,7 @@ npm start
 | `PORT` | `backend/.env` | Port the Express server listens on |
 | `MONGO_URI` | `backend/.env` | Full MongoDB connection string |
 | `JWT_SECRET` | `backend/.env` | Secret key used to sign JWT tokens |
-| `VITE_API_URL` | `frontend/.env` | Base URL of the backend API |
+<!-- | `VITE_API_URL` | `frontend/.env` | Base URL of the backend API | -->
 
 ---
 

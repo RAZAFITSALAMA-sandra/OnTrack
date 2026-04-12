@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskflow-backend
+  labels: 
+    app: taskflow-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: taskflow-backend
+  template:
+    metadata:
+      labels:
+        app: taskflow-backend
+    spec:
+      containers:
+        - name: backend
+          image: sandra1002/taskflow-backend:v1
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGO_URI
+              value: "mongodb://host.docker.internal:27017/taskflow"
+            - name: JWT_SECRET
+              value: "taskflow_secret_2024"

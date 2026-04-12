@@ -125,7 +125,7 @@ MONGO_URI=mongodb://admin:sandra@localhost:27017/taskflow?authSource=admin
 JWT_SECRET=taskflow_secret_2024
 ```
 
-<!-- #### Frontend — `frontend/.env`
+#### Frontend — `frontend/.env`
 
 ```env
 VITE_API_URL=http://localhost:3000/api

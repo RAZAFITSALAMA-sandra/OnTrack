@@ -11,5 +11,3 @@ API.interceptors.request.use((req) => {
 });
 
 export default API;
-
-// aja tia jala

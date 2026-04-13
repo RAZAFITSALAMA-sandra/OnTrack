@@ -35,4 +35,4 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: sandra1002/taskflow-backend:v2
+          tags: sandra1002/taskflow-backend:v4

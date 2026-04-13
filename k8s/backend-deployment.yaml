@@ -16,11 +16,11 @@ spec:
     spec:
       containers:
         - name: backend
-          image: sandra1002/taskflow-backend:v2
+          image: sandra1002/taskflow-backend:v4
           ports:
             - containerPort: 3000
           env:
             - name: MONGO_URI
-              value: "mongodb://192.168.88.243:27017/taskflow"
+              value:  "mongodb+srv://doadmin:91jRdI42h0s6w78H@db-mongodb-fra1-taskflow-8fe8cb2b.mongo.ondigitalocean.com/taskflow?authSource=admin&tls=true"
             - name: JWT_SECRET
               value: "taskflow_secret_2024"

@@ -21,6 +21,6 @@ spec:
             - containerPort: 3000
           env:
             - name: MONGO_URI
-              value: "mongodb://192.168.88.110:27017/taskflow"
+              value: "mongodb://192.168.88.243:27017/taskflow"
             - name: JWT_SECRET
               value: "taskflow_secret_2024"

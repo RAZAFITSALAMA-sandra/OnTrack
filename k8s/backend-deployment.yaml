@@ -22,5 +22,6 @@ spec:
           env:
             - name: MONGO_URI
               value:  "mongodb+srv://doadmin:91jRdI42h0s6w78H@db-mongodb-fra1-taskflow-8fe8cb2b.mongo.ondigitalocean.com/taskflow?authSource=admin&tls=true"
+              value:  "mongodb+srv://doadmin:91jRdI42h0s6w78H@db-mongodb-fra1-taskflow-8fe8cb2b.mongo.ondigitalocean.com/taskflow?authSource=admin&tls=true"
             - name: JWT_SECRET
               value: "taskflow_secret_2024"

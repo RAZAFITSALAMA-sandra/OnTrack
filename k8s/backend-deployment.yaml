@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: sandra1002/taskflow-backend:v4
+          image: sandra1002/taskflow-backend:v7
           ports:
             - containerPort: 3000
           env:

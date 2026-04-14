@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: sandra1002/taskflow-frontend:v4
+          image: sandra1002/taskflow-frontend:v7
           ports:
             - containerPort: 80

@@ -19,7 +19,7 @@ export default function Login() {
       login(data.user, data.token);
       navigate('/tasks');
     } catch (err) {
-      setErreur(err.response?.data?.message || 'Erreur de connexion');
+      setErreur(err.response?.data?.message);
     } finally {
       setChargement(false);
     }

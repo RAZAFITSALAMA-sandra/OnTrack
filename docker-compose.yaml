@@ -13,9 +13,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-      dockerfile: Dockerfile
     container_name: taskflow-frontend
-    ports:
     ports:
       - "81:80"
     depends_on:

@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: taskflow-backend
-  labels: 
+  namespace: dev
+  labels:
     app: taskflow-backend
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: taskflow-backend
@@ -16,12 +17,28 @@ spec:
     spec:
       containers:
         - name: backend
-          image: sandra1002/taskflow-backend:v7
+          image: sandra1002/taskflow-backend:v12
           ports:
-            - containerPort: 3000
-          env:
-            - name: MONGO_URI
-              value:  "mongodb+srv://doadmin:91jRdI42h0s6w78H@db-mongodb-fra1-taskflow-8fe8cb2b.mongo.ondigitalocean.com/taskflow?authSource=admin&tls=true"
-              value:  "mongodb+srv://doadmin:91jRdI42h0s6w78H@db-mongodb-fra1-taskflow-8fe8cb2b.mongo.ondigitalocean.com/taskflow?authSource=admin&tls=true"
-            - name: JWT_SECRET
-              value: "taskflow_secret_2024"
+            - containerPort: 5000
+          envFrom:
+            - secretRef:
+                name: taskflow-backend-secret
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 10

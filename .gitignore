@@ -9,3 +9,5 @@ logs.txt
 
 db-online.txt
 token-digital-ocean
+k8s/db-secret.yam
+k8s/ingress-nginx-do.yaml
